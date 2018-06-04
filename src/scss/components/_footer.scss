@@ -1,0 +1,140 @@
+.main-foot{
+	background-image: url(../../images/footer_bg.png);
+	background-size: cover;
+	background-position: center;
+	padding-top: 80px;
+	&__grid{
+		display: grid;
+		grid-template-areas:
+			'menu cat cat cat cat  cat'
+			'logo cat cat cat cat  cat';
+		margin-bottom: 50px;
+		@include max-screen(992px){
+			grid-template-areas:
+				'menu menu logo logo'
+				'cat cat cat cat';
+		}
+		@include max-screen(480px){
+			grid-template-areas:
+				'menu'
+				'logo'
+				'cat';
+				grid-row-gap: 40px
+		}
+	}
+	&__menu{
+		grid-area: menu;
+
+	}
+	&__logo{
+		grid-area: logo;
+	}
+	&__categories{
+		grid-area: cat;
+		@include max-screen(992px){
+			margin-top: 50px;
+		}
+	}
+	&__menu-list{
+		display: flex;
+		flex-wrap: wrap;
+		width: 200px;
+	}
+	&__menu-list-item{
+		width: 100px;
+	}
+	&__menu-list-link{
+		font-weight: 400;
+		font-size: em(16px);
+		color: $color-white;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__statistics{
+		height: 30px;
+		width: 90px;
+	}
+	&__st_cont{
+		width: 200px;
+	}
+	&__bline{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include max-screen(768px){
+			flex-direction: column;
+		}
+	}
+}
+
+.socio{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100px;
+	&__link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25px;
+		height: 25px;
+		background-color: $color-white;
+		transition: all ease 0.4s;
+		&:hover{
+			background-color: $acent-text-cl;
+		}
+		& > svg{
+			height: 18px;
+		}
+	}
+}
+
+.categories{
+	max-height: 200px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include max-screen(1200px){
+		max-height: 320px;
+	}
+	@include max-screen(768px){
+		max-height: 480px;
+	}
+	@include max-screen(480px){
+		max-height:100%;
+	}
+	&__list-item{
+		margin-right: 20px;
+	}
+	&__link{
+		line-height: 1.4;
+		font-weight: 400;
+		font-size: em(16px);
+		color: $color-white;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__shadow_text{
+		color: $shadow-text-cl;
+	}
+}
+
+.bline{
+	&__text{
+		width: 60%;
+		@include max-screen(768px){
+			text-align: center;
+			width: 100%;
+		}
+	}
+	&__stat{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

@@ -1,0 +1,80 @@
+.gallery{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&__wrapper{
+		display: grid;
+		grid-template-columns: 3fr	 1fr ;
+		grid-gap: 15px;
+		@include max-screen(992px){
+			grid-template-columns: 2fr ;
+		}
+	}
+	&__grid-inner{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 15px;
+		grid-template-areas:
+		'first second column'
+		'third third column';
+		@include max-screen(992px){
+			grid-template-columns: repeat(2,1fr);
+			grid-template-areas:
+			'first second'
+			'third third'
+			'column column';
+		}
+		@include max-screen(480px){
+			grid-template-areas:
+			'first first'
+			'second second'
+			'third third'
+			'column column';
+		}
+	}
+	&__item{
+		position: relative;
+		min-height: 300px;
+		/* @include max-screen(768px){
+			max-height: 300px;
+			overflow: hidden;
+		} */
+		
+		&--one-fr{
+			grid-area: first;
+		}
+		&--two-fr{
+			grid-area: second;
+		}
+		&--three-fr{
+			grid-area: third;
+		}
+		&--two-row{
+			grid-area: column;
+		}
+
+	}
+
+	&__content{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 20px 15px;
+		&--top{
+			top: 0;
+			z-index: 10;
+		}
+	}
+	&__truncated-post{
+		font-weight: 400;
+		font-size: em(16px);
+		line-height: 24px;
+	}
+	&__overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color-black, .6);
+	}
+}

@@ -1,0 +1,71 @@
+block content
+	section.two_window
+		div.container
+			div.two_window__grid
+				div.two_window__item
+					h3.base-title.base-title--big Решение проблем
+					a.two_window__window(href='/')
+						img.two_window__poster(src="../../images/card_img1.png")
+						div.two_window__content 
+							h4.base-title.base-title--small.base-title--cl_white.base-title--mb10 Оптимизация Windows 10
+
+							div.sublime
+								div.sublime___date.sublime__item 13 Апр 2018
+								div.sublime__item
+									span.sublime__icon
+										+svg("eye")
+									span 1352
+								div.sublime__item
+									span.sublime__icon
+										+svg("comment")
+									span 11
+					div.article.two_window__articles
+						each item in Articles
+							a.article__item.article__item--jcfs(href="/")
+								div.article__poster
+									img.article__image(src=item.poster)
+								div.article__content
+									h4.base-title.base-title--small.base-title.article__title=item.title
+									div.article__date=item.date
+									div.sublime.sublime--mw120
+										div.sublime__item
+											span.sublime__icon.sublime__icon--darc
+												+svg("eye")
+											span=item.views
+										div.sublime__item
+											span.sublime__icon.sublime__icon--darc
+												+svg("comment")
+											span=item.comments
+				div.two_window__item
+					h3.base-title.base-title--big Подборки софта
+					a.two_window__window(href='/')
+						img.two_window__poster(src="../../images/card_img2.png")
+						div.two_window__content
+							h4.base-title.base-title--small.base-title--cl_white.base-title--mb10 Рейтинг браузеров 2017 года
+							div.sublime
+								div.sublime___date.sublime__item 13 Апр 2018
+								div.sublime__item
+									span.sublime__icon
+										+svg("eye")
+									span 1352
+								div.sublime__item
+									span.sublime__icon
+										+svg("comment")
+									span 11
+					div.article.two_window__articles
+						each item in Articles
+							a.article__item.article__item--jcfs(href="/")
+								div.article__poster
+									img.article__image(src=item.poster)
+								div.article__content
+									h4.base-title.base-title--small.base-title.article__title=item.title
+									div.article__date=item.date
+									div.sublime.sublime--mw120
+										div.sublime__item
+											span.sublime__icon.sublime__icon--darc
+												+svg("eye")
+											span=item.views
+										div.sublime__item
+											span.sublime__icon.sublime__icon--darc
+												+svg("comment")
+											span=item.comments

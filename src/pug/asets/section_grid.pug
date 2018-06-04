@@ -1,0 +1,31 @@
+block content
+	section.articles
+		div.container
+			h3.base-title.base-title--big.articles__header Статьи
+			div.articles__grid
+				each item in articlesGrid
+					a.articles__item(href="/")
+						div.articles__arrow
+							+svg('arrow-alt-circle-right')
+						div.articles__poster
+							img.articles__img(src=item.img)
+							div.articles__date=item.date
+
+						div.articles__content
+							div.sublime.sublime--darc.sublime--mw300
+								div.sublime__item
+									div.sublime__cat=item.cat
+								div.sublime__item
+									span.sublime__icon.sublime__icon--darc
+										+svg("eye")
+									span=item.views
+								div.sublime__item
+									span.sublime__icon.sublime__icon--darc
+										+svg("comment")
+									span=item.comments
+							div.articles__title
+								h4.base-title.base-title--small.articles__title(data-trancate='60')=item.title
+			div.articles__btn
+				span.icon.sublime__icon--rotate
+					+svg("sync")
+				span Показать ещё

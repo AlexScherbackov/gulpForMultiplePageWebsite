@@ -1,0 +1,10 @@
+extends pug/base
+
+append vars
+	- html.classList.push('page-index')
+	- menuList = [{title:'Все статьи', href:'', subList:[{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'},{title:'Bios', href:'', quant:'13'}]},{title:'Контакты', href:''},{title:'О блоге', href:'blog.html'},{title:'Реклама', href:''},{title:'Задать вопрос', href:''}]
+
+
+block content
+	include pug/asets/top_line.pug
+	include pug/asets/footer.pug

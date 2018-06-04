@@ -1,0 +1,50 @@
+block content
+	div.top-line#mobile-triger
+		div.container.top-line__row
+			div.row.justify-content-between.top-line__flex
+				a.top-line__logo.logo(href='/')
+					strong.logo__upper pcpro
+					span.logo__numbers 100
+					small.logo__end .info
+				nav.top-line__menu.header_menu
+					ul.header_menu__list.desctop
+						each item in menuList
+							li.header_menu__item
+								a.header_menu__link(href=item.href)=item.title
+								if(item.subList)
+									ul.header_menu__sublist
+										each elem in item.subList
+											li.header_menu__item
+												a.header_menu__link=elem.title
+													span=elem.quant
+						li.header_menu__item.search-target
+							a.header_menu__link.header_menu__search
+								+svg("search")
+							form.header_menu__searchform.searchform
+								input.searchform__control
+								//.searchform__close
+									//span.searchform__closeicon 
+								button(type="submit").searchform__btn
+									+svg("search")
+								
+					ul.mobile_menu__list.mobile_menu
+						li.mobile_menu__list-item.search-target
+							a.header_menu__link.header_menu__search
+								+svg("search")
+							form.header_menu__searchform.searchform
+								input.searchform__control
+								//a.searchform__close
+									//span.searchform__closeicon
+								button(type="submit").searchform__btn
+									+svg("search")
+
+						li.mobile_menu__list-item
+							a.hamburger#hamburger
+								span.hamburger__line.line
+								span.hamburger__line.line
+								span.hamburger__line.line
+		div.container.top-line__row
+			ul.header_mobile_menu
+				each item in menuList
+					li.header_mobile_menu__item
+								a.header_mobile_menu__link(href=item.href)=item.title

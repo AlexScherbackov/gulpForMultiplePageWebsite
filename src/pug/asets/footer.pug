@@ -1,0 +1,44 @@
+append vars
+	- categories = [{title: 'Bios', quant: '12'}, {title: 'Bluetooth', quant: '133'}, {title: 'Excel', quant: '92'}, {title: 'HDD (жестк ий диск)', quant: '52'}, {title: 'Office', quant: '10'}, {title: 'Skype', quant: '136'}, {title: 'SSD', quant: '176'}, {title: 'Windows 10', quant: '12'}, {title: 'Windows 7', quant: '198'}, {title: 'Windows 8', quant: '220'}, {title: 'Word', quant: '18'}, {title: 'Архиваторы', quant: '22'}, {title: 'Безопасность (вирусы)', quant: '15'}, {title: 'Браузеры', quant: '12'}, {title: 'Видео и аудио ', quant: '97'}, {title: 'Вопросы по работе ', quant: '64'}, {title: 'Восстановление данных', quant: '2'}, {title: 'Драйвера', quant: '19'}, {title: 'Звук', quant: '12'}, {title: 'Игровые проблемы ', quant: '64'}, {title: 'Микрофон', quant: '11'}, {title: 'Ноутбук', quant: '82'}, {title: 'Образы дисков', quant: '34'}, {title: 'Оптимизация Windows', quant: '17'}, {title: 'Очистка компьютера', quant: '12'}, {title: 'Ошибки', quant: '72'}, {title: 'Подключение', quant: '91'}, {title: 'Поиск железа', quant: '34'}, {title: 'Принтеры и сканеры', quant: '2'}, {title: 'Реклама ', quant: '84'}, {title: 'Ремонт, восстановление', quant: '2'}, {title: 'Роутеры и Wi-Fi', quant: '17'}, {title: 'Сеть и интернет', quant: '36'}, {title: 'Скриншоты и фото', quant: '12'}, {title: 'Тестирование', quant: '65'}, {title: 'Тормоза и фризы', quant: '13'}, {title: 'Торренты', quant: '82'}, {title: 'Ускорение', quant: '76'}, {title: 'Установка Windows', quant: '54'}, {title: 'Флешка', quant: '92'}]
+block content
+	footer.main-foot
+		div.container
+			div.main-foot__grid
+				div.main-foot__menu
+					h4.base-title.base-title--small.base-title--cl_white.base-title--ttu.base-title--mb10 Меню сайта
+					ul.main-foot__menu-list
+						li.main-foot__menu-list-item
+								a.main-foot__menu-list-link(href='/') Главная
+						each item in menuList
+							li.main-foot__menu-list-item
+								a.main-foot__menu-list-link(href=item.href)=item.title
+				div.main-foot__logo
+					a.logo(href='/')
+						strong.logo__upper pcpro
+						span.logo__numbers 100
+						small.logo__end .info
+					p Мы в социальных сетях:
+					div.socio
+						a.socio__link
+							+svg("vk")
+						a.socio__link
+							+svg("facebook-f")
+						a.socio__link
+							+svg("telegram-plane")
+				div.main-foot__categories
+					h4.base-title.base-title--small.base-title--cl_white.base-title--ttu.base-title--mb10 Рубрики сайта
+					ul.categories
+						each item  in categories
+							li.categories__list-item
+								a.categories__link(href="/")
+									span=item.title
+									- str = " (" + item.quant + ")"
+									span.categories__shadow_text=str
+		div.container
+			div.main-foot__bline
+				p.bline__text При использовании материалов сайта - прямая ссылка на pcpro100.info обязательна.
+				div.bline__stat.main-foot__st_cont
+					img.main-foot__statistics(src='../../images/rambler.png')
+					img.main-foot__statistics(src='../../images/live-internet.png')
+
+								

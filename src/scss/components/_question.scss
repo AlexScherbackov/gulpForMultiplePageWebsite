@@ -1,0 +1,54 @@
+.question{
+	padding-bottom: 50px;
+	&__bg{
+		position: relative;
+		background-image: url(../../images/section_bg.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		max-height: 515px;
+		height: 100%;
+		padding: 120px 50px;
+		@include max-screen(480px){
+			padding: 80px 25px;
+		}
+	}
+	&__text{
+		max-width: 616px;
+		width: 100%;
+		margin: 25px 0 15px;
+		color: $section-text-cl;
+	}
+	&__link{
+		display: block;
+		margin-bottom: 25px;
+		font-weight: 700;
+		font-size: em(16px);
+		color: $acent-text-cl;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+		&--with-bg{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 285px;
+			background-color: $acent-text-cl;
+			color: $color-white;
+			padding: 10px  40px  10px 15px;
+			transition: all ease 0.4s;
+			&:hover{
+				background-color: rgba($acent-text-cl, 0.6);
+				text-decoration: none;
+			}
+			@include max-screen(480px){
+				width: 250px;
+			}
+		}
+	}
+	&__icon{
+		fill: $color-white;
+
+	}
+}
